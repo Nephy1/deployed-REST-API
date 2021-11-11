@@ -5,7 +5,7 @@ const app = express()
 const mongoose = require('mongoose')
 const model = require ('./data/models/photos')
 const dotenv = require('dotenv').config()
-let PORT = process.env.PORT
+let PORT = process.env.PORT || 3000
 app.use(express.static('public'))
 
 
@@ -19,7 +19,7 @@ mongoose.connect(
   .catch(function(err){
     console.log(err)
   })
-
+// Routes
 app.get('/api/photos', function(request, response) {
    response.send(images)
  })
@@ -30,7 +30,7 @@ app.get('/api/photos/:id', function(request, response){
   })
     response.send(photo)
 })
-
+// Error responses
 app.use(function(request, response) {
   if (request.url.startsWith('/api')) {
     response.status(404)
@@ -40,8 +40,8 @@ app.use(function(request, response) {
     response.redirect('/404.html')
   }
 });
-
-app.listen(process.env.PORT || 3000, function() {
+// Port
+app.listen(PORT, function() {
   console.log(`Listening on ${PORT}`)
 })
 
