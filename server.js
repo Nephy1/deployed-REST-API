@@ -5,7 +5,7 @@ const app = express()
 const mongoose = require('mongoose')
 const model = require ('./data/models/photos')
 const dotenv = require('dotenv').config()
-
+let PORT = process.env.PORT
 app.use(express.static('public'))
 
 
@@ -41,8 +41,8 @@ app.use(function(request, response) {
   }
 });
 
-app.listen(3000, function() {
-  console.log("Listening on port 3000!")
+app.listen(process.env.PORT || 3000, function() {
+  console.log(`Listening on ${PORT}`)
 })
 
 
