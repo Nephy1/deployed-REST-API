@@ -10,10 +10,10 @@ https://github.com/Nephy1/cpnt-262-a5
 - Struggling on getting errors when api endpoint !== an actual ID. I wasn't able to complete this part unfortunately.
 
 ## Heroku
-- Had little problems with heroku thankfully. Initially had my server in limbo until I fixed my port issue. Cleared it right up. Was actually alot easier to do than I had thought.
+- Had little problems with Heroku thankfully. Initially had my server in limbo until I fixed my port issue. Cleared it right up. Was actually alot easier to do than I had thought.
 
 ## Mongo DB
-- I wasn't able to get the object data to push through mongoose into MongoDB. I had to enter it manually like we were shown in class.
+- I wasn't able to get the object data to push through Mongoose into MongoDB. I had to enter it manually like we were shown in class.
 
 ### File Management
 - I know my JavaScript file management / exports are very messy. It's a work in progress and seems like a whole other beast on it's own.
